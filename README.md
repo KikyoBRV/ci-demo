@@ -1,3 +1,5 @@
+[![Django CI](../../actions/workflows/run-unit-tests.yml/badge.svg)](../../actions/workflows/run-unit-tests.yml)
+[![flake8](../../actions/workflows/run-flake8.yml/badge.svg)](../../actions/workflows/run-flake8.yml)
 Continuous Integration Demo
 ===========================
 
