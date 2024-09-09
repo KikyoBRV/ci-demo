@@ -1,4 +1,6 @@
-"""This module contain 3 math function to find average, variance and standard deviation"""
+"""This module contain 3 math function to find average, variance and
+standard deviation
+"""
 import math
 
 
