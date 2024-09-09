@@ -1,8 +1,7 @@
-[![Django CI](../../actions/workflows/run-unit-tests.yml/badge.svg)](../../actions/workflows/run-unit-tests.yml)
-[![flake8](../../actions/workflows/run-flake8.yml/badge.svg)](../../actions/workflows/run-flake8.yml)
-
 Continuous Integration Demo
 ===========================
+[![unittests](../../actions/workflows/run-unit-tests.yml/badge.svg)](../../actions/workflows/run-unit-tests.yml)
+[![flake8](../../actions/workflows/run-flake8.yml/badge.svg)](../../actions/workflows/run-flake8.yml)
 
 This project demonstrates use of Github Actions to build and test a Python project.  
 
