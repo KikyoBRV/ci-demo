@@ -1,4 +1,7 @@
+"""This module contain 3 math function to find average, variance and standard deviation"""
 import math
+
+
 def average(data):
     """Return the average of a list of numeric values in data."""
     if len(data)==0:
