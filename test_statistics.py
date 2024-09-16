@@ -1,21 +1,37 @@
 from unittest import TestCase
-from statistics import variance, stdev
+from statistics import variance, stdev, average
 from math import sqrt
 
 class StatisticsTest(TestCase):
+
+    def test_average_typical_values(self):
+        """Test average of typical values"""
+        self.assertEqual(3.0, average([1, 2, 3, 4, 5]))
+        self.assertEqual(10.0, average([10, 10, 10, 10]))
+        self.assertEqual(2.5, average([1, 2, 3, 4]))
+
+    def test_average_empty_list(self):
+        """Test average function with an empty list"""
+        with self.assertRaises(ValueError):
+            average([])
 
     def test_variance_typical_values(self):
         """variance of typical values"""
         self.assertEqual(0.0, variance([10.0,10.0,10.0,10.0,10.0]))
         self.assertEqual(2.0, variance([1,2,3,4,5]))
         self.assertEqual(8.0, variance([10,2,8,4,6]))
-    
+
     def test_variance_non_integers(self):
         """variance should work with decimal values"""
         # variance([x,y,z]) == variance([x+d,y+d,z+d]) for any d
         self.assertAlmostEqual(4.0, variance([0.1, 4.1]))
         # variance([0,4,4,8]) == 8
         self.assertAlmostEqual(8.0, variance([0.1, 4.1, 4.1, 8.1]))
+
+    def test_variance_empty_list(self):
+        """Test variance function with an empty list"""
+        with self.assertRaises(ValueError):
+            variance([])
 
     def test_stdev(self):
         # standard deviation of a single value should be zero
@@ -29,4 +45,3 @@ class StatisticsTest(TestCase):
 if __name__ == '__main__':
     import unittest
     unittest.main(verbosity=1)
-
